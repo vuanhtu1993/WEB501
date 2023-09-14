@@ -1,4 +1,5 @@
-import { circle_P } from "./module1.js";
+import circle_P, { circle_S } from "./module1.js";
+// import { circle_P } from "./module1.js";
 // 1. Data type (7 types)
 // String
 // Number
@@ -27,4 +28,4 @@ import { circle_P } from "./module1.js";
 
 
 
-console.log(circle_P(10));
+console.log(circle_S(10));
