@@ -12,3 +12,14 @@ for (let item of result) {
 console.log(tenSV);
 // const result = sv[0].toUpperCase() + sv.slice(1)
 // console.log(result);
+
+const reverseString = (someString) => {
+    const length = someString.length
+    let result = ""
+    for (let i = length - 1; i >= 0; i--) {
+        result += someString[i]
+    }
+    return result
+}
+// reverseString("I am a string")
+console.log(reverseString("I am a string")) // gnirts a ma I
