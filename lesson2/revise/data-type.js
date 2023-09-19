@@ -23,3 +23,26 @@ const reverseString = (someString) => {
 }
 // reverseString("I am a string")
 console.log(reverseString("I am a string")) // gnirts a ma I
+
+
+// Number data-type
+// Bài 1: Cho chuỗi số [4,6,1,5,-6,2,8,1,9,3]
+// Tìm số lớn nhất và số nhỏ nhất
+// Tìm số lớn thứ 2 (chỉ dùng 1 vòng lặp)
+
+
+// Array data-type
+// Bài 1: 
+let classRoom = [
+    "nguyễn tiến duẩn",
+    "Hoàng Xuân Hiếu",
+    "Hồ Sỹ Hưng",
+    "Nguyễn Đức Thuận",
+    "đoàn Minh Tùng",
+    "Hồ Sỹ Hùng",
+    "Lê Trung Hiếu",
+    "đoàn vua dep trai vua hoc gioi Hữu Quý"]
+// Câu 1: Tach ten va ho rieng
+// Câu 2: Thêm một sv vào một vị trí bất kỳ trong mảng
+// Câu 3: Xoá một sinh viên khỏi mảng
+// Câu 4: Tìm kiếm theo tên, không chứa dấu
