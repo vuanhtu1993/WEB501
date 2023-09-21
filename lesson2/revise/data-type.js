@@ -9,7 +9,7 @@ for (let item of result) {
     // console.log(item[0].toUpperCase() + item.slice(1));
     tenSV += item[0].toUpperCase() + item.slice(1) + " "
 }
-console.log(tenSV);
+// console.log(tenSV);
 // const result = sv[0].toUpperCase() + sv.slice(1)
 // console.log(result);
 
@@ -22,7 +22,7 @@ const reverseString = (someString) => {
     return result
 }
 // reverseString("I am a string")
-console.log(reverseString("I am a string")) // gnirts a ma I
+// console.log(reverseString("I am a string")) // gnirts a ma I
 
 
 // Number data-type
@@ -46,3 +46,30 @@ let classRoom = [
 // Câu 2: Thêm một sv vào một vị trí bất kỳ trong mảng
 // Câu 3: Xoá một sinh viên khỏi mảng
 // Câu 4: Tìm kiếm theo tên, không chứa dấu
+
+// Buổi 5: Object
+// Cách để tạo ra object
+// 1. Object literal
+const sinhvien = {
+    name: "nguyễn tiến duẩn",
+    goToSchool: function () {
+        console.log("I'm going to school");
+    }
+}
+
+// console.log(sinhvien.name);
+// sinhvien.goToSchool()
+// 2. Từ khoá new
+const sinhvien2 = new Object({
+    name: "nguyễn tiến duẩn",
+    class: "WD18201",
+    goToSchool: function () {
+        console.log("I'm going to school");
+    },
+    showInfo: () => {
+        console.log(this);
+        // This - đại diện cho đối tượng
+        // This - chỉ tồn tại trong method
+        console.log(this.name + "-" + this.class);
+    }
+})

@@ -1,24 +1,38 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+// component header
+const Header = () => {
+  // string interpolation
+  return `
+    <header>Đầu trang</header>
+  `
+}
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello các bạn!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const Footer = () => {
+  return `
+    <footer>Đuôi trang</footer>
+  `
+}
 
-setupCounter(document.querySelector('#counter'))
+const Content = () => {
+  return `
+    <article>List product</article>
+  `
+}
+
+const HomePage = () => {
+  return `
+    ${Header()}
+    ${Content()}
+    ${Footer()}
+  `
+}
+
+const ProductDetail = () => {
+  return `
+  ${Header()}
+  <h1>Chi tiet san pham</h1>
+  ${Footer()}
+  `
+}
+
+// Render dữ liệu
+document.querySelector('#app').innerHTML = HomePage()
