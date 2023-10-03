@@ -1,3 +1,4 @@
+// Cách 1: Imperative
 // const bulb = document.createElement('img')
 // bulb.src = "/off.png"
 // bulb.style.maxWidth = "80px";
@@ -16,16 +17,24 @@
 //     }
 // })
 
+// Cách 2: Declarative
+// State
+let bulbState = true
+let switchState = true
 // Component
-const BulbComponent = function() {
+function Bulb() {
     return `
-        <img src="/off.png">
-        <button>Turn on</button>
+        <img style="max-width: 80px" src="${bulbState ? "/on.png" : "/off.png"}"/>
+        <button>Switch</button>
     `
 }
 
-const render = function(component) {
-    document.body.innerHTML = component()
+const render = (container, component) => {
+    document.querySelector(container).innerHTML = component()
+    document.querySelector("button").addEventListener('click', function() {
+        bulbState = !bulbState
+        render("body", Bulb)
+    })
 }
 
-render(BulbComponent)
+render("body", Bulb)
