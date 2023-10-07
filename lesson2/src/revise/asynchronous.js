@@ -8,16 +8,27 @@
 // }, 2000)
 
 // Ham bat dong bo
-// function doSomeThing(congviec, time) {
-//     setTimeout(function() {
-//         console.log("Đã hoàn thành ",congviec);
-//     }, time)
-// }
+function doSomeThing(congviec, time, callback) {
+    setTimeout(function() {
+        console.log("Đã hoàn thành ",congviec);
+        callback()
+    }, time)
+}
 
 // doSomeThing("Công việc 1", 0)
 // doSomeThing("Công việc 2", 2000)
 // doSomeThing("Công việc 3", 1000)
 // console.log("Hoàn thành công việc 4");
+
+// Callback hell
+doSomeThing("Công việc 1", 0, function() {
+    doSomeThing("Công việc 2", 2000, function() {
+        doSomeThing("Công việc 3", 1000, function() {
+            console.log("Hoàn thành công việc 4");
+        })
+    })
+})
+// Promise
 
 // Bất đồng bộ
 function loadScript(src, callback) {
