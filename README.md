@@ -19,3 +19,24 @@ npm install
 ```
 
 ## Bước 4: Chạy chương trình
+
+<!-- Cai dat json-server -->
+# Cai dat json-server
+### Buoc 1: Cai dat npm json-server toan cuc
+```
+npm install -g json-server
+```
+
+### Buoc 2: Run server
+```
+// cd thu muc chua db.json
+json-server db.json
+```
+
+### Buoc 3: Test server
+Len trinh duyet vao duong dan "http://localhost:3000"
+
+### Buoc 4: Cai dat concurrently
+```
+npm install -g concurrently
+```

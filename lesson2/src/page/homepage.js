@@ -1,10 +1,21 @@
 import Footer from "../components/footer"
 import Header from "../components/header"
 import ProductItem from "../components/product-item"
-// Destructoring
-import { books } from '../../db.json' assert {type: 'json'}
+import {useState, useEffect} from '../lib'
 
 const HomePage = () => {
+  let [books, setBook] = useState([])
+  useEffect(function() {
+    fetch('http://localhost:3000/books') //Promise
+    .then(function(res) {
+      return res.json()
+    }) 
+    .then(function(data) {
+      // books = data
+      setBook(data)
+    })
+  }, [])
+  
   return /*html*/`
       ${Header()}
       <h1>Trang chủ</h1>

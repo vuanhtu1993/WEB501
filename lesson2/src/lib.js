@@ -34,7 +34,7 @@ const render = (container, component) => {
 const rerender = debounce(() => {
     currentStateOrder = 0;
     currentEffectOrder = 0;
-    rootContainer.innerHTML = rootComponent();
+    document.querySelector(rootContainer).innerHTML = rootComponent();
 
     effects.forEach((effect) => {
         // shouldRunEffect = true khi không truyền deps hoặc deps khác nhau
