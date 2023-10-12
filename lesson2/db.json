@@ -76,6 +76,24 @@
       },
       "rating_average": 5,
       "short_description": "Sơ lược về tác phẩmTất cả những trải nghiệm trong chuyến phiêu du theo đuổi vận mệnh của mình đã giúp Santiago thấu hiểu được ý nghĩa sâu xa nhất của hạnh phúc, hòa hợp với vũ trụ và con người.Tiểu ..."
+    },
+    {
+      "name": "iphoneX",
+      "list_price": "10000",
+      "short_description": "iphoneX",
+      "id": 9
+    },
+    {
+      "name": "san pham 1",
+      "list_price": "100",
+      "short_description": "san pham 1",
+      "id": 10
+    },
+    {
+      "name": "san pham 1",
+      "list_price": "4324",
+      "short_description": "34234",
+      "id": 11
     }
   ]
 }

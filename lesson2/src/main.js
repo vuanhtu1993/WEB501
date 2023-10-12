@@ -4,6 +4,7 @@ import ProductDetail from "./page/product-detail";
 import { render, router } from "./lib";
 import './style.css'
 import Dashboard from "./page/admin/dashboard";
+import CreateBook from "./page/admin/create";
 
 // Router
 router.on('/', function () {
@@ -17,6 +18,10 @@ router.on('/product/:id', function ({data}) {
 
 router.on('/admin', function () {
   render("#app", Dashboard)
+})
+
+router.on('/admin/create', function () {
+  render("#app", CreateBook)
 })
 
 
