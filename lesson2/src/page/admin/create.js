@@ -1,6 +1,18 @@
-import { useEffect } from "../../lib"
+import * as Joi from 'joi'
+import { useEffect, useState } from "../../lib"
+
+const createFormSchema = Joi.object({
+    name: Joi.string().required().messages({
+        "string.empty": "Trường dữ liệu bắt buộc"
+    }),
+    list_price: Joi.number().required().min(1000).messages({
+        "number.empty": "Trường dữ liệu bắt buộc" 
+    }),
+    short_description: Joi.string()
+})
 
 const CreateBook = function() {
+    const [errors, setErrors] = useState([])
 
     const postBook = function(data) {
         fetch('http://localhost:3000/books', {
@@ -26,9 +38,12 @@ const CreateBook = function() {
             const newBook = {
                 name, list_price, short_description
             }
-            postBook(newBook)
+            const {error, value} = createFormSchema.validate(newBook, {abortEarly: false})
+            if (error) {
+                setErrors(error.details.map(item => item.message))
+            }
         }
-    }, [])
+    }, [errors])
     return /*html*/`
 <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-lg text-center">
@@ -39,7 +54,7 @@ const CreateBook = function() {
         eaque error neque ipsa culpa autem, at itaque nostrum!
     </p>
     </div>
-
+    ${errors.map(err => `<div class="text-red-600">${err}</div>`).join("")}
     <form id="create-form" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
     <div>
         <label>Tên</label>
