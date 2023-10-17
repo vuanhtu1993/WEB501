@@ -71,7 +71,7 @@ const Dashboard = function() {
                     <img src="${book.images?.[0]}"/>
                 </td>
                 <td class="px-4 py-2">
-                    <a href="#" class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">
+                    <a href="/admin/book/${book.id}" class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">
                         Update
                     </a>
                     <button data-id="${book.id}" class="delete-btn inline-block rounded bg-red-500 px-4 py-2 text-xs font-medium text-white">

@@ -5,6 +5,7 @@ import { render, router } from "./lib";
 import './style.css'
 import Dashboard from "./page/admin/dashboard";
 import CreateBook from "./page/admin/create";
+import UpdateBook from "./page/admin/update";
 
 // Router
 router.on('/', function () {
@@ -22,6 +23,10 @@ router.on('/admin', function () {
 
 router.on('/admin/create', function () {
   render("#app", CreateBook)
+})
+
+router.on('/admin/book/:id', function ({data}) {
+  render("#app", () => UpdateBook(data.id))
 })
 
 
