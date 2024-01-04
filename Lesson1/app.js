@@ -29,8 +29,29 @@ if(true) {
     let a = 20
 }
 
-console.log(a);
+// console.log(a);
 
 // Const
-const c = 10
-c = 20
+// const c = 10
+// c = 20
+
+// Function
+// 1. function declaration (hàm khai báo)
+// Hoisting
+// capitalize()
+
+// function capitalize() {
+
+// }
+
+// 2. function expression (hàm biểu thức)
+// capitalize()
+// const capitalize = function() {
+
+// }
+// console.log(typeof(capitalize));
+
+// 3. Arrow function
+// const capitalize = () => {
+//     // this
+// }
