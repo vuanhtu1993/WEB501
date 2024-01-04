@@ -1,31 +1,36 @@
-import circle_P, { circle_S } from "./module1.js";
-// import { circle_P } from "./module1.js";
-// 1. Data type (7 types)
-// String
-// Number
-// Boolean
-// Null
-// Undefined
-// Object - Function, Array
-// Symbol
+// Variables
+// Có 3 cách khai báo var, let, const (2015 - ecma6)
+// 1. Redeclaration
+// var 
+// var a = 10;
+// var a = 20;
+// console.log(a);
 
-// 2. Conditional statement
-// 3. Loop
-// 4. Function (input: parameter, output: return)
-// Function keyword
-// phong => PHONG
-// function upperWord(str) {
-//     return str.toUpperCase()
+// Let
+// let b = 10;
+// let b = 20;
+
+// 2. Scope
+// var
+// var a = 10
+
+// if(true) {
+//     // Block scope
+//     var a = 20
 // }
-// const upperWord = function (str) {
-//     return str.toUpperCase()
-// }
-// ES6
-// const upperWord = (str) => {
-//     return str.toUpperCase()
-// }
-// console.log(upperWord("phong"));
 
+// console.log(a);
 
+// Let
+let a = 10
 
-console.log(circle_S(10));
+if(true) {
+    // Block scope
+    let a = 20
+}
+
+console.log(a);
+
+// Const
+const c = 10
+c = 20
