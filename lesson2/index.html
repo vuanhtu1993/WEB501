@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="red"></div>
+        <div id="orange"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+        <div id="indigo"></div>
+        <div id="violet"></div>
+        <button>Rainbow</button>
+
+    <script>
+        let btn = document.querySelector("button")
+        console.log(btn)
+        // Event listener
+        btn.addEventListener('click', function() {
+            document.querySelector('#red').style.backgroundColor = document.querySelector('#red').getAttribute('id')
+        })
+
+        btn.addEventListener('click', function() {
+            document.querySelector('#orange').style.backgroundColor = 'orange'
+        })
+
+    </script>
+</body>
+</html>

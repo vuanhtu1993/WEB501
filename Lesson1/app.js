@@ -1,57 +1,74 @@
 // Variables
-// Có 3 cách khai báo var, let, const (2015 - ecma6)
-// 1. Redeclaration
-// var 
+// ---- Redeclaration ----
+// Var
 // var a = 10;
 // var a = 20;
+
 // console.log(a);
-
 // Let
-// let b = 10;
-// let b = 20;
+// let b = 10
+// let b = 20
 
-// 2. Scope
-// var
+// console.log(b);
+// ---- Block scope
+// Var
 // var a = 10
-
 // if(true) {
-//     // Block scope
+//     // Block
 //     var a = 20
 // }
 
 // console.log(a);
 
 // Let
-let a = 10
+// let a = 10
+// if(true) {
+//     // Block
+//     let a = 20
+//     console.log(a, "in block");
+// }
+// let a = 10
+// {
+//     let a = 20
+//     console.log(a, "block 1");
+//     {
+//         // let a = 30
+//         console.log(a, "block 2");
+//     }
+// }
 
-if(true) {
-    // Block scope
-    let a = 20
+// console.log(a, "block 0");
+
+// OOP - Object Oriented Programming
+// Có 2 cách tạo đối tượng
+// Object literature
+// let room = {
+//     width: 4.5,
+//     length: 6,
+//     height: 3.5,
+//     location: "F",
+//     floor: 4,
+//     code: 406,
+//     open: function() {
+//         console.log("Opening....");
+//     },
+//     close: function() {
+//         console.log("Close....");
+//     }
+// }
+
+// String
+// String method
+// Task1:
+let sv = " nguyen quang huy"
+// Nguyen Quang Huy
+let newStr = "";
+for(let i = 1; i < sv.length; i++) {
+    if (sv[i - 1] == " ") {
+        newStr += sv[i].toUpperCase()
+        continue;
+    }
+    newStr += sv[i];
 }
 
-// console.log(a);
-
-// Const
-// const c = 10
-// c = 20
-
-// Function
-// 1. function declaration (hàm khai báo)
-// Hoisting
-// capitalize()
-
-// function capitalize() {
-
-// }
-
-// 2. function expression (hàm biểu thức)
-// capitalize()
-// const capitalize = function() {
-
-// }
-// console.log(typeof(capitalize));
-
-// 3. Arrow function
-// const capitalize = () => {
-//     // this
-// }
+console.log(newStr);
