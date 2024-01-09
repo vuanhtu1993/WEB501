@@ -15,7 +15,11 @@ npm -v
 ```jsx
 npm create vite@latest
 # cd vao thu muc chua code
+// Cài đặt thư viện
 npm install
+
+// Chaỵ chương trình
+npm run dev
 ```
 
 ## Bước 4: Chạy chương trình
