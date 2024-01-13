@@ -3,3 +3,5 @@ const Contact = function () {
         <h1>Liên hệ</h1>
     `
 }
+
+export default Contact;
