@@ -38,9 +38,10 @@ const Card = function () {
 const HomePage = function () {
   return `
     ${Header()}
-    <div style="display: flex">
-      <div>${Advertisement()}</div>
-      <div>
+    <h1>Trang chủ</h1>
+    <div style="display: flex; width: 100%">
+      <div style="width: 40%">${Advertisement()}</div>
+      <div style="width: 60%">
         ${Card()}
         ${Card()}
         ${Card()}
