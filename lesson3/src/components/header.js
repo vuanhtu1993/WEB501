@@ -8,7 +8,7 @@ const Header = function () {
             <li>Trang chủ</li>
             <li>Ngành học</li>
             <li>Sự kiện</li>
-            <li>Liên hệ</li>
+            <li><a href="/contact" data-navigo>Liên hệ</a></li>
           </ul>
         </nav>
       </nav>
