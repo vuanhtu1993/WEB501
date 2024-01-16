@@ -1,10 +1,17 @@
 import HeaderComponent from '../components/header'
 import FooterComponent from '../components/footer'
 
+import { books } from '../../db.json' assert {type: 'json'}
+
 const HomePage = function () {
   return `
       ${HeaderComponent()}
-      <h1 id="trang-chu">Trang chủ</h1>
+      ${books.map(function (book) {
+    return `
+        <div>
+          <img src="${book.images[0].base_url}"/>
+        </div>`
+  })}
       ${FooterComponent()}
     `
 }
