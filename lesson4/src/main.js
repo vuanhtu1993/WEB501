@@ -1,5 +1,6 @@
 import Contact from "./pages/contact";
 import HomePage from "./pages/home"
+import "../style.css"
 
 import { render, router } from "./ultilities";
 
