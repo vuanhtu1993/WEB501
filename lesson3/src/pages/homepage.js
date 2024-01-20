@@ -10,11 +10,12 @@ const HomePage = function () {
   return `
       ${Header()}
       <h1>Trang chủ</h1>
+      <div class="grid grid-cols-3 gap-4">
       ${data.books.map(function (book) {
-    return `
-          <img width="150px" src="${book.images[0].base_url}"/>
-        `
-  })}
+    return Card(book)
+  }).join("")}
+      </div>
+      
       ${Footer()}
     `
 }
