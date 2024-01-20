@@ -4,6 +4,7 @@ import { render, router } from "./ultilities";
 import Contact from "./pages/contact";
 import HomePage from "./pages/homepage"
 import NotFound from "./pages/notFound";
+import "../style.css"
 
 router.on('/', function () {
   render("#app", HomePage)
