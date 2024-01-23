@@ -1,6 +1,6 @@
 const Book = function (book) {
     return `    
-    <a href="#" class="block">
+    <a href="/book/${book.id}" class="block">
         <img
             alt="Art"
             src="${book.images[0].base_url}"
