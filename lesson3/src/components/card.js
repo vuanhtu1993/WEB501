@@ -1,6 +1,6 @@
 const Card = function (book) {
   return /*html*/`
-    <a href="#" class="block">
+    <a href="/book/${book.id}" class="block">
       <img
         alt="Art"
         src="${book.images[0].base_url}"

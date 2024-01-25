@@ -4,6 +4,7 @@ import { render, router } from "./ultilities";
 import Contact from "./pages/contact";
 import HomePage from "./pages/homepage"
 import NotFound from "./pages/notFound";
+import BookDetail from "./pages/bookDetail";
 import "../style.css"
 
 router.on('/', function () {
@@ -13,6 +14,11 @@ router.on('/', function () {
 router.on('/contact', function () {
   render("#app", Contact)
 });
+
+router.on('/book/:id', function ({ data }) {
+  console.log(data.id);
+  render("#app", () => BookDetail(data.id))
+})
 
 router.notFound(function () {
   render("#app", NotFound)
