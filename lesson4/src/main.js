@@ -4,6 +4,7 @@ import "../style.css"
 
 import { render, router } from "./ultilities";
 import BookDetail from "./pages/bookDetail";
+import Dashboard from "./pages/dashboard";
 
 router.on('/', function () {
     render("#app", HomePage)
@@ -18,6 +19,11 @@ router.on('/book/:id', function ({ data }) {
 router.on('/contact', function () {
     render("#app", Contact)
 });
+
+// Admin
+router.on("/admin", function () {
+    render("#app", Dashboard)
+})
 
 router.resolve();
 
