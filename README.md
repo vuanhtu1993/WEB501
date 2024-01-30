@@ -47,3 +47,11 @@ npm install -g concurrently
     "start": "concurrently \"vite\" \"json-server -w db.json\"",
   },
 ```
+Và chạy lenh sau để chay dự án
+```
+    npm run start
+```
+#### Lưu ý: Nếu lỗi thì chạy câu lệnh sau:
+```
+Set-ExecutionPolicy -Scope "CurrentUser" -ExecutionPolicy "RemoteSigned"
+```
