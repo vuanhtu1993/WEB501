@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "concurrently \"vite\" \"npx json-server -w db.json\"",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -16,6 +17,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
+    "concurrently": "^8.2.2",
     "navigo": "^8.11.1",
     "tailwind": "^4.0.0"
   }
