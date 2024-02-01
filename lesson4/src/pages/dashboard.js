@@ -14,6 +14,30 @@ const Dashboard = function () {
             })
     }, [])
 
+    useEffect(function () {
+        // Add event
+        const deleteBtns = document.querySelectorAll(".btn-delete")
+        deleteBtns.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                const result = confirm("Đã chắc chưa ?")
+                if (result) {
+                    const id = btn.dataset.id
+                    handleDeleteBook(id)
+                }
+
+            })
+        })
+    })
+
+    const handleDeleteBook = function (id) {
+        fetch("http://localhost:3000/books/" + id, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        })
+    }
+
     return /*html*/`
         <h1 class="text-xl">Dashboard</h1>
 
@@ -42,11 +66,12 @@ const Dashboard = function () {
                         </td>
                         <td class="whitespace-nowrap px-4 py-2">
                             <a
-                            href="/admin/book/${book.id}"
+                            href="/admin/book/${book.id}" 
                             class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                             >
                             View
                             </a>
+                            <button data-id="${book.id}" class="btn-delete bg-red-600 text-white px-4 py-2 rounded text-xs">Xoá</button>
                         </td>
                     </tr>
                 `).join("")}
