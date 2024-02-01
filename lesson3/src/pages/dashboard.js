@@ -12,6 +12,29 @@ const Dashboard = function () {
             })
     }, [])
 
+    useEffect(function () {
+        const deleteBtns = document.querySelectorAll(".delete-btn")
+        deleteBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                const cf = confirm("Đã chắc chắn xoá chưa ?")
+                if (cf) {
+                    const id = btn.dataset.id
+                    console.log(id);
+                    handleDeleteBook(id)
+                }
+            }
+        })
+    })
+
+    const handleDeleteBook = function (id) {
+        fetch("http://localhost:3000/books/" + id, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+    }
+
     return /*html*/`
     <h1 class="text-2xl">Dashboard</h1>
     <div class="">
@@ -43,6 +66,7 @@ const Dashboard = function () {
                         >
                         View
                         </a>
+                        <button data-id="${book.id}" class="delete-btn bg-red-600 text-xs text-white rounded px-4 py-2">Xoá</button>
                     </td>
                 </tr>
                 `
