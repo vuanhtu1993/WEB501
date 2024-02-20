@@ -61,7 +61,7 @@ const Dashboard = function () {
                     </td>
                     <td class="whitespace-nowrap px-4 py-2">
                         <a
-                        href="#"
+                        href="/admin/book/${book.id}"
                         class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                         >
                         View

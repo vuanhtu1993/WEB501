@@ -7,6 +7,7 @@ import NotFound from "./pages/notFound";
 import BookDetail from "./pages/bookDetail";
 import "../style.css"
 import Dashboard from "./pages/dashboard";
+import UpdateBook from "./pages/updateBook";
 
 router.on('/', function () {
   render("#app", HomePage)
@@ -22,6 +23,10 @@ router.on('/book/:id', function ({ data }) {
 
 router.on("/admin", function () {
   render("#app", Dashboard)
+})
+
+router.on("/admin/book/:id", function ({ data }) {
+  render("#app", () => UpdateBook(data.id))
 })
 
 router.notFound(function () {
