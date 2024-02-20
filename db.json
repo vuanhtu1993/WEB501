@@ -1,4 +1,20 @@
 {
   "products": [
+    {
+      "name": "7 thói quen của người thành công",
+      "publisher": "Kim Đồng",
+      "description": "7 thói quen của người thành công",
+      "price": 100000,
+      "review": 1,
+      "id": "1"
+    },
+    {
+      "name": "Hạt giống tâm hồn tái bản",
+      "publisher": "Kim Đồng",
+      "description": "                            7 thói quen của người thành công\n                        ",
+      "price": null,
+      "review": "5",
+      "id": "2"
+    }
   ]
 }
