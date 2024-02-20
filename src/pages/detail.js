@@ -30,13 +30,19 @@ const Detail = (id) => {
             description,
             review
         }
-        fetch("http://localhost:3000/products/" + id, {
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newData),
-            method: "PATCH"
-        }).then(() => alert("Cập nhật thành công"))
+        console.log(newData);
+        if (name && price && description && review) {
+
+            fetch("http://localhost:3000/products/" + id, {
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newData),
+                method: "PATCH"
+            }).then(() => alert("Cập nhật thành công"))
+        } else {
+            alert("Vui lòng điển đủ thông tin")
+        }
     }
     console.log(product);
     return /*html*/`
@@ -69,6 +75,20 @@ const Detail = (id) => {
                     value="${product.publisher}"
                     name="publisher"
                     type="text"
+                    class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                    placeholder="Enter password"
+                    />
+                </div>
+                </div>
+
+                <div>
+                <label for="password">Giá</label>
+        
+                <div class="relative">
+                    <input
+                    value="${product.price}"
+                    name="price"
+                    type="number"
                     class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                     placeholder="Enter password"
                     />
